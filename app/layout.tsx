@@ -1,6 +1,7 @@
 import { Roboto } from "next/font/google"
 import './globals.css'
 import Navbar from "./components/navbar/Navbar";
+import Modal from "./components/modal/Modal";
 
 export const metadata = {
   title: 'Rental Finder',
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <Modal isOpen />
         <Navbar />
         {children}
       </body>
