@@ -7,6 +7,7 @@ import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import useRegisterModal from "../hooks/useRegisterModal";
 import Modal from "./Modal";
+import Heading from "../Heading";
 
 const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -40,6 +41,15 @@ const RegisterModal = () => {
       });
   };
 
+  const bodyContent = (
+    <div className="flex flex-col gap-4">
+        <Heading
+            title="Welcome to RentalFinder"
+            subtitle="Create an account!"
+        />
+    </div>
+  )
+
   return (
     <Modal
       disabled={isLoading}
@@ -48,6 +58,7 @@ const RegisterModal = () => {
       actionLabel="Continue"
       onClose={registerModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
+      body={bodyContent}
     />
   );
 };
