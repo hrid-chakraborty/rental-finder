@@ -2,6 +2,7 @@
 
 import { AiOutlineMenu } from 'react-icons/ai'
 import { useState,useCallback } from 'react'
+import Avatar from './Avatar'
 
 const UserMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const UserMenu = () => {
                 <div onClick={toggleOpen} className="p-4 md:py-1 md:px-2 border border-neutral-200 flex flex-row items-center gap-3 rounded-md cursor-pointer hover:shadow-md transition">
                     <AiOutlineMenu />
                     <div className='hidden md:block'>
-                         
+                         <Avatar />
                     </div>
                 </div>
             </div>
