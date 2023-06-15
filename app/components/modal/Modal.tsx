@@ -14,7 +14,7 @@ interface ModalProps {
     actionLabel: string;
     disabled?: boolean;
     secondaryAction?: () => void;
-    secondaryActionLabel: string;
+    secondaryActionLabel?: string;
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, footer, actionLabel, disabled, secondaryAction, secondaryActionLabel }) => {
@@ -28,7 +28,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit, title, body, f
         }
 
         setShowModal(false);
-        setTimeout(() => { onClose }, 300)   //For 300ms animation
+        setTimeout(() => { onClose() }, 300)   //For 300ms animation
     }, [disabled, onClose])
 
     const handleSubmit = useCallback(() => {
