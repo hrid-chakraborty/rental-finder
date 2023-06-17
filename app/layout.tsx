@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import RegisterModal from "./components/modal/RegisterModal";
 import { Toaster } from "react-hot-toast"
+import LoginModal from "./components/modal/LoginModal";
+import getCurrentUser from "./actions/getCurrentUser";
 
 export const metadata = {
   title: "Rental Finder",
@@ -11,17 +13,19 @@ export const metadata = {
 
 const font = Roboto({ subsets: ["latin"], weight: "400" });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const currentUser = await getCurrentUser();
   return (
     <html lang="en">
       <body className={font.className}>
         <Toaster />
         <RegisterModal />
-        <Navbar />
+        <LoginModal />
+        <Navbar currentUser={currentUser}/>
         {children}
       </body>
     </html>
