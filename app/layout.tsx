@@ -5,6 +5,7 @@ import RegisterModal from "./components/modal/RegisterModal";
 import { Toaster } from "react-hot-toast"
 import LoginModal from "./components/modal/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
+import RentModal from "./components/modal/RentModal";
 
 export const metadata = {
   title: "Rental Finder",
@@ -23,6 +24,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <Toaster />
+        <RentModal />
         <RegisterModal />
         <LoginModal />
         <Navbar currentUser={currentUser}/>
