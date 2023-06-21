@@ -34,18 +34,19 @@ const RegisterModal = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
 
-    axios
-      .post("/api/register", data)
-      .then(() => {
-        registerModal.onClose();
-      })
-      .catch((error) => {
-        toast.error("Something went wrong");
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  };
+    axios.post('/api/register', data)
+    .then(() => {
+      toast.success('Registered!');
+      registerModal.onClose();
+      loginModal.onOpen();
+    })
+    .catch((error) => {
+      toast.error(error);
+    })
+    .finally(() => {
+      setIsLoading(false);
+    })
+  }
 
   const onToggle = useCallback(() => {
     registerModal.onClose();
