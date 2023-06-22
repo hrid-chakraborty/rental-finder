@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast"
 import LoginModal from "./components/modal/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "./components/modal/RentModal";
+import SearchModal from "./components/modal/SearchModal";
 
 export const metadata = {
   title: "Rental Finder",
@@ -24,6 +25,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <Toaster />
+        <SearchModal />
         <RentModal />
         <RegisterModal />
         <LoginModal />
