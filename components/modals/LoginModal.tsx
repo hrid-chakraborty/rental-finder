@@ -40,15 +40,17 @@ const LoginModal = () => {
       redirect: false,
     }).then((callback) => {
       setIsLoading(false);
-
-      if (callback?.ok) {
-        toast.success('Logged in');
-        router.refresh();
-        loginModal.onClose();
-      }
       
       if (callback?.error) {
         toast.error(callback.error);
+        router.refresh();
+        loginModal.onClose();
+      }
+
+      else if (callback?.ok) {
+        toast.success('Logged in');
+        router.refresh();
+        loginModal.onClose();
       }
     });
   };
