@@ -5,11 +5,11 @@ import { useRouter } from "next/navigation";
 import { useCallback, useMemo } from "react";
 import { format } from 'date-fns';
 
-import useCountries from "@/app/hooks/useCountries";
+import useCountries from "@/hooks/useCountries";
 
 import LikeButton from "../LikeButton";
 import Button from "../Button";
-import { SafeListing, SafeReservation, SafeUser } from "@/app/types";
+import { SafeListing, SafeReservation, SafeUser } from "@/types";
 
 interface ListingCardProps {
   data: SafeListing;

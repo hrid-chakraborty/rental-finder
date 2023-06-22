@@ -4,7 +4,7 @@ import { useCallback, useMemo } from "react";
 import { toast } from "react-hot-toast";
 
 import useLoginModal from "./useLoginModal";
-import { SafeUser } from "../types";
+import { SafeUser } from "@/types";
 
 interface IUseFavorite {
   listingId: string;

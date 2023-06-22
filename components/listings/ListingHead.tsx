@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 
-import useCountries from "@/app/hooks/useCountries";
+import useCountries from "@/hooks/useCountries";
 
 import Heading from "../Heading";
 import LikeButton from "../LikeButton";
-import { SafeUser } from "@/app/types";
+import { SafeUser } from "@/types";
 
 interface ListingHeadProps {
   title: string;

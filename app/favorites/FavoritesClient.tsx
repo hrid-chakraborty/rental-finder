@@ -1,7 +1,8 @@
-import Heading from "@/app/components/Heading";
-import ContainerComponent from "@/app/components/ContainerComponent";
-import ListingCard from "@/app/components/listings/ListingCard";
-import { SafeListing, SafeUser } from "../types";
+import Heading from "@/components/Heading";
+import ContainerComponent from "@/components/ContainerComponent";
+import ListingCard from "@/components/listings/ListingCard";
+import { SafeListing, SafeUser } from "@/types";
+
 
 interface FavoritesClientProps {
   listings: SafeListing[],

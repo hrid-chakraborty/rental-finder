@@ -5,11 +5,11 @@ import { useState, useCallback } from "react";
 import Avatar from "../Avatar";
 import MenuItem from "./MenuItem";
 import useRegisterModal from "../../hooks/useRegisterModal";
-import useLoginModal from "@/app/hooks/useLoginModal";
+import useLoginModal from "@/hooks/useLoginModal";
 import { signOut } from "next-auth/react";
-import useRentModal from "@/app/hooks/useRentModal";
+import useRentModal from "@/hooks/useRentModal";
 import { useRouter } from "next/navigation";
-import { SafeUser } from "@/app/types";
+import { SafeUser } from "@/types";
 
 interface UserMenuProps {
   currentUser?: SafeUser | null

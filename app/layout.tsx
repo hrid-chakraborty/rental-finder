@@ -1,12 +1,12 @@
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/navbar/Navbar";
-import RegisterModal from "./components/modals/RegisterModal";
+import Navbar from "@/components/navbar/Navbar";
+import RegisterModal from "@/components/modals/RegisterModal";
 import { Toaster } from "react-hot-toast"
-import LoginModal from "./components/modals/LoginModal";
-import getCurrentUser from "./actions/getCurrentUser";
-import RentModal from "./components/modals/RentModal";
-import SearchModal from "./components/modals/SearchModal";
+import LoginModal from "@/components/modals/LoginModal";
+import getCurrentUser from "@/actions/getCurrentUser";
+import RentModal from "@/components/modals/RentModal";
+import SearchModal from "@/components/modals/SearchModal";
 
 export const metadata = {
   title: "Rental Finder",
