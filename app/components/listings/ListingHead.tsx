@@ -6,14 +6,14 @@ import useCountries from "@/app/hooks/useCountries";
 
 import Heading from "../Heading";
 import LikeButton from "../LikeButton";
-import { User } from "@prisma/client";
+import { SafeUser } from "@/app/types";
 
 interface ListingHeadProps {
   title: string;
   locationValue: string;
   imageSrc: string;
   id: string;
-  currentUser?: User | null
+  currentUser?: SafeUser | null
 }
 
 const ListingHead: React.FC<ListingHeadProps> = ({

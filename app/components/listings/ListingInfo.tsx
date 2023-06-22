@@ -7,14 +7,14 @@ import useCountries from "@/app/hooks/useCountries";
 
 import Avatar from "../Avatar";
 import ListingCategory from "./ListingCategory";
-import { User } from "@prisma/client";
+import { SafeUser } from "@/app/types";
 
 const Map = dynamic(() => import('../Map'), { 
   ssr: false 
 });
 
 interface ListingInfoProps {
-  user: User,
+  user: SafeUser,
   description: string;
   guestCount: number;
   roomCount: number;
