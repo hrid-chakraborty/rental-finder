@@ -59,7 +59,7 @@ This will get the server running on port 3000. Navigate to `localhost:3000` to  
 
 ## Live Demo
 
-You can [view](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0)  a live demo here. The website has been hosted on Vercel (The creators of Next JS)
+You can [view](https://rental-finder.vercel.app/)  a live demo here. The website has been hosted on Vercel (The creators of Next JS)
 
 
 ## Credits
